@@ -2,6 +2,8 @@
 
 ## About AureShame
 
+## Contract: 0x658a0Ea978B79A156B130F36bBC6AE3b940BfA35
+
 **AureShame** is a unique NFT collection of **nine exclusive NFTs** that delve deep into the emotion of **shame**. Each artwork in this collection is designed with simplicity, yet carries profound meaning, reflecting the complexities of the human experience. This collection serves as both an artistic exploration and an invitation for introspection on how we experience, process, and express shame.
 
 The collection is built on the **PulseChain** blockchain, offering you a chance to own a piece of digital art that is both rare and meaningful. With only **nine NFTs** in existence, AureShame represents exclusivity and rarity, making each piece a powerful addition to any collection.
