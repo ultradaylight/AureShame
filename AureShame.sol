@@ -2,7 +2,7 @@
 
 // Shame informs you of an internal state of inadequacy, dishonor, or regret.
 
-pragma solidity ^0.8.22;
+pragma solidity ^0.8.20;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
