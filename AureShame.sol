@@ -29,7 +29,7 @@ contract AureShame is Ownable, ERC721, ERC721URIStorage, ERC721Enumerable, Reent
     constructor(address initialOwner) 
     ERC721("AureShame", "AURESHAME")
       Ownable(initialOwner) {
-      baseUri = "https://ipfs.io/ipfs/bafybeiadcpd2cbjqpgso4t3jypshwstmz2aawdwr5fzgqhhpfmsrf3wx4i/";
+      baseUri = "https://ipfs.io/ipfs/bafybeic3sfsfzw6bnnd42c5qlfznlm5hweb3teuktzmbhciji6c2oxqxvy/";
         for(uint256 i = 1; i <= TOKENS_RESERVED; ++i) {
             _safeMint(msg.sender, i);
         }
