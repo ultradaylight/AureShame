@@ -1,0 +1,12 @@
+{
+        "name": "Red Eyes Of Shame",
+        "description": "Constantly medicated",
+        "image": "ipfs://bafybeih3z3l23bhupcsqhx4azxke2ntusugwk7er36zagajtfxwacyvvly/7.png",
+        "attributes": [
+            {
+                "trait_type": "Background",
+                "value": "Black"
+            }
+        ],
+        "background_color": "000000"
+    }
