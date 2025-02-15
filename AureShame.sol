@@ -4,111 +4,88 @@
 
 pragma solidity ^0.8.20;
 
-import "@openzeppelin/contracts/access/Ownable.sol";
-import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
-import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
+import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
-contract AureShame is Ownable, ERC721, ERC721URIStorage, ERC721Enumerable, ReentrancyGuard {
-    
-    using Strings for uint256;
+contract AURESHAME is ERC721Enumerable, ERC721URIStorage, Ownable, ReentrancyGuard {
+    uint256 public constant MAX_SUPPLY = 9;
+    uint256 public constant MINT_PRICE = 1_000_000 * (10 ** 18); // 1M PLS assuming 18 decimals
+    uint256 private _tokenIdCounter;
+    string private baseUri = "https://ipfs.io/ipfs/bafybeic3sfsfzw6bnnd42c5qlfznlm5hweb3teuktzmbhciji6c2oxqxvy/";
+    mapping(address => bool) private hasMinted;
 
-    uint public constant MAX_TOKENS = 9;
-    uint private constant TOKENS_RESERVED = 1;
-    uint public price = 1000000000000000000000000;
-    uint256 public constant MAX_MINT_PER_TX = 1;
+    event BaseURIUpdated(string newBaseUri);
+    event NFTMinted(address indexed recipient, uint256 tokenId);
+    event Withdraw(address indexed owner, uint256 amount);
+    event WithdrawTokens(address indexed owner, address token, uint256 amount);
 
-    bool public flipShame;
-    uint256 public shametotalSupply;
-    mapping(address => uint256) private mintedPerWallet;
-
-    string public baseUri;
-    string public baseExtension = ".json";
-
-    constructor(address initialOwner) 
-    ERC721("AureShame", "AURESHAME")
-      Ownable(initialOwner) {
-      baseUri = "https://ipfs.io/ipfs/bafybeic3sfsfzw6bnnd42c5qlfznlm5hweb3teuktzmbhciji6c2oxqxvy/";
-        for(uint256 i = 1; i <= TOKENS_RESERVED; ++i) {
-            _safeMint(msg.sender, i);
-        }
-        shametotalSupply = TOKENS_RESERVED;
+    // Constructor with Ownable initial owner
+    constructor() ERC721("AURESHAME", "ALIPS") Ownable(0xCD11789CEf81Be2BCe676A34CC9331f8cE557116) {
+        _mintNFT(msg.sender, "1"); // Transfer one NFT to contract creator
+        hasMinted[msg.sender] = true;
+        _tokenIdCounter = 1; // Start counting from 1 since creator gets the first NFT
     }
 
-     
-    function mint(uint256 _numTokens) external payable {
-        require(flipShame, "Shameless.");
-        require(_numTokens <= MAX_MINT_PER_TX, "Mint one AureShame at at a time.");
-        require(mintedPerWallet[msg.sender] + _numTokens <= MAX_MINT_PER_TX, "No more mints.");
-        uint256 curTotalSupply = shametotalSupply;
-        require(curTotalSupply + _numTokens <= MAX_TOKENS, "Shame.");
-        require(_numTokens * price <= msg.value, "Need more PLS.");
-
-        for(uint256 i = 1; i <= _numTokens; ++i) {
-            _safeMint(msg.sender, curTotalSupply + i);
-        }
-        mintedPerWallet[msg.sender] += _numTokens;
-        shametotalSupply += _numTokens;
+    function setBaseURI(string memory newBaseUri) external onlyOwner {
+        baseUri = newBaseUri;
+        emit BaseURIUpdated(newBaseUri);
     }
 
-    
-    function ActionShame() external onlyOwner {
-        flipShame = !flipShame;
+    function mint(string memory tokenId) external payable nonReentrant {
+        require(_tokenIdCounter < MAX_SUPPLY, "All NFTs have been minted");
+        require(msg.value >= MINT_PRICE, "Insufficient payment");
+        require(!hasMinted[msg.sender], "You can only mint one NFT");
+        
+        hasMinted[msg.sender] = true;
+        _mintNFT(msg.sender, tokenId);
     }
 
-    function setBaseUri(string memory _baseUri) external onlyOwner {
-        baseUri = _baseUri;
+    function _mintNFT(address recipient, string memory tokenId) private {
+        require(_tokenIdCounter < MAX_SUPPLY, "All NFTs have been minted");
+        _safeMint(recipient, _tokenIdCounter);
+        _setTokenURI(_tokenIdCounter, tokenId);
+        emit NFTMinted(recipient, _tokenIdCounter);
+        _tokenIdCounter++;
     }
 
-    function setPrice(uint256 _price) external onlyOwner {
-        price = _price;
-    }
-
-    function shamefulPride() external payable onlyOwner {
+    function withdraw() external onlyOwner nonReentrant {
         uint256 balance = address(this).balance;
-        uint256 balanceOne = balance * 100 / 100;
-        uint256 balanceTwo = balance * 0 / 100;
-        ( bool transferOne, ) = payable(0x5Cfd8509D1c8dC26Bb567fF14D9ab1E01F5d5a32).call{value: balanceOne}("");
-        ( bool transferTwo, ) = payable(0xCD11789CEf81Be2BCe676A34CC9331f8cE557116).call{value: balanceTwo}("");
-        require(transferOne && transferTwo, "Transfer failed.");
+        require(balance > 0, "No PLS to withdraw");
+        payable(owner()).transfer(balance);
+        emit Withdraw(owner(), balance);
     }
 
-    function _update(address to, uint256 tokenId, address auth)
-        internal
-        override(ERC721, ERC721Enumerable)
-        returns (address)
-    {
-        return super._update(to, tokenId, auth);
+    function withdrawTokens(address tokenAddress) external onlyOwner nonReentrant {
+        IERC20 token = IERC20(tokenAddress);
+        uint256 balance = token.balanceOf(address(this));
+        require(balance > 0, "No tokens to withdraw");
+        token.transfer(owner(), balance);
+        emit WithdrawTokens(owner(), tokenAddress, balance);
     }
 
-    function _increaseBalance(address account, uint128 value)
-        internal
-        override(ERC721, ERC721Enumerable)
-    {
+    // Override supportsInterface to resolve conflicts
+    function supportsInterface(bytes4 interfaceId) public view override(ERC721Enumerable, ERC721URIStorage) returns (bool) {
+        return super.supportsInterface(interfaceId);
+    }
+
+    // Override the conflicting functions due to ERC721 and ERC721Enumerable
+    function _increaseBalance(address account, uint128 value) internal virtual override(ERC721, ERC721Enumerable) {
         super._increaseBalance(account, value);
     }
 
-
-    function tokenURI(uint256 tokenId) public view virtual override(ERC721, ERC721URIStorage) returns (string memory) {
-        require(_ownerOf(tokenId) != address(0), "ERC721Metadata: URI query for nonexistent token");
- 
-        string memory currentBaseURI = _baseURI();
-        return bytes(currentBaseURI).length > 0
-            ? string(abi.encodePacked(currentBaseURI, tokenId.toString(), baseExtension))
-            : "";
+    function _update(address to, uint256 tokenId, address auth) internal virtual override(ERC721, ERC721Enumerable) returns (address) {
+        return super._update(to, tokenId, auth);
     }
 
-    function supportsInterface(bytes4 interfaceId)
+    function tokenURI(uint256 tokenId)
         public
         view
-        override(ERC721, ERC721URIStorage, ERC721Enumerable)
-        returns (bool)
+        override(ERC721, ERC721URIStorage)
+        returns (string memory)
     {
-        return super.supportsInterface(interfaceId);
-    }
- 
-    function _baseURI() internal view virtual override returns (string memory) {
-        return baseUri;
+        return string(abi.encodePacked(baseUri, Strings.toString(tokenId), ".json"));
     }
 }
