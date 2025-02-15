@@ -58,13 +58,6 @@ contract AURESHAME is ERC721Enumerable, ERC721URIStorage, Ownable, ReentrancyGua
         emit Withdraw(owner(), balance);
     }
 
-    function withdrawTokens(address tokenAddress) external onlyOwner nonReentrant {
-        IERC20 token = IERC20(tokenAddress);
-        uint256 balance = token.balanceOf(address(this));
-        require(balance > 0, "No tokens to withdraw");
-        token.transfer(owner(), balance);
-        emit WithdrawTokens(owner(), tokenAddress, balance);
-    }
 
     // Override supportsInterface to resolve conflicts
     function supportsInterface(bytes4 interfaceId) public view override(ERC721Enumerable, ERC721URIStorage) returns (bool) {
