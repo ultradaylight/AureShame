@@ -23,7 +23,7 @@ contract AURESHAME is ERC721Enumerable, ERC721URIStorage, Ownable, ReentrancyGua
     event WithdrawTokens(address indexed owner, address token, uint256 amount);
 
     // Constructor with Ownable initial owner
-    constructor() ERC721("AURESHAME", "ALIPS") Ownable(0xCD11789CEf81Be2BCe676A34CC9331f8cE557116) {
+    constructor() ERC721("AURESHAME", "ASHAME") Ownable(0xCD11789CEf81Be2BCe676A34CC9331f8cE557116) {
         _tokenIdCounter = 1; // Start the counter from 1 to give the creator the first NFT
         _mintNFT(msg.sender, "1"); // Transfer the first NFT to the contract creator
         hasMinted[msg.sender] = true;
