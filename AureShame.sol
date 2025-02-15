@@ -24,9 +24,9 @@ contract AURESHAME is ERC721Enumerable, ERC721URIStorage, Ownable, ReentrancyGua
 
     // Constructor with Ownable initial owner
     constructor() ERC721("AURESHAME", "ALIPS") Ownable(0xCD11789CEf81Be2BCe676A34CC9331f8cE557116) {
-        _mintNFT(msg.sender, "1"); // Transfer one NFT to contract creator
+        _tokenIdCounter = 1; // Start the counter from 1 to give the creator the first NFT
+        _mintNFT(msg.sender, "1"); // Transfer the first NFT to the contract creator
         hasMinted[msg.sender] = true;
-        _tokenIdCounter = 1; // Start counting from 1 since creator gets the first NFT
     }
 
     function setBaseURI(string memory newBaseUri) external onlyOwner {
@@ -57,7 +57,6 @@ contract AURESHAME is ERC721Enumerable, ERC721URIStorage, Ownable, ReentrancyGua
         payable(owner()).transfer(balance);
         emit Withdraw(owner(), balance);
     }
-
 
     // Override supportsInterface to resolve conflicts
     function supportsInterface(bytes4 interfaceId) public view override(ERC721Enumerable, ERC721URIStorage) returns (bool) {
