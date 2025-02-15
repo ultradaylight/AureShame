@@ -24,7 +24,7 @@ There are only **nine exclusive NFTs** in the entire **AURESHAME** collection, e
 - **Minting Price**: 1,000,000 PLS
 - **Total NFTs in Collection**: 9
 - **Minting Limit**: 1 NFT per transaction (to preserve exclusivity)
-- [https://scan.mypinata.cloud/ipfs/bafybeih3olry3is4e4lzm7rus5l3h6zrphcal5a7ayfkhzm5oivjro2cp4/#/token/0x658a0Ea978B79A156B130F36bBC6AE3b940BfA35?tab=write_contract](https://scan.mypinata.cloud/ipfs/bafybeih3olry3is4e4lzm7rus5l3h6zrphcal5a7ayfkhzm5oivjro2cp4/#/address/0xE0300Fb1A0ecB5C5B15c53e45de6a71ed66Af0d5?tab=write_contract)
+- [https://scan.mypinata.cloud/ipfs/bafybeih3olry3is4e4lzm7rus5l3h6zrphcal5a7ayfkhzm5oivjro2cp4/#/token/0xE0300Fb1A0ecB5C5B15c53e45de6a71ed66Af0d5?tab=write_contract](https://scan.mypinata.cloud/ipfs/bafybeih3olry3is4e4lzm7rus5l3h6zrphcal5a7ayfkhzm5oivjro2cp4/#/address/0xE0300Fb1A0ecB5C5B15c53e45de6a71ed66Af0d5?tab=write_contract)
 
 ## Why PulseChain?
 
