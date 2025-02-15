@@ -1,22 +1,22 @@
-# AureShame - A NFT Project Exploring the Depths of Shame
+# AURESHAME - A NFT Project Exploring the Depths of Shame
 
-## About AureShame
+## About AURESHAME
 
-## Contract: 0x658a0Ea978B79A156B130F36bBC6AE3b940BfA35
+## Contract: 0xE0300Fb1A0ecB5C5B15c53e45de6a71ed66Af0d5
 
-**AureShame** is a unique NFT collection of **nine exclusive NFTs** that delve deep into the emotion of **shame**. Each artwork in this collection is designed with simplicity, yet carries profound meaning, reflecting the complexities of the human experience. This collection serves as both an artistic exploration and an invitation for introspection on how we experience, process, and express shame.
+**AURESHAME** is a unique NFT collection of **nine exclusive NFTs** that delve deep into the emotion of **shame**. Each artwork in this collection is designed with simplicity, yet carries profound meaning, reflecting the complexities of the human experience. This collection serves as both an artistic exploration and an invitation for introspection on how we experience, process, and express shame.
 
-The collection is built on the **PulseChain** blockchain, offering you a chance to own a piece of digital art that is both rare and meaningful. With only **nine NFTs** in existence, AureShame represents exclusivity and rarity, making each piece a powerful addition to any collection.
+The collection is built on the **PulseChain** blockchain, offering you a chance to own a piece of digital art that is both rare and meaningful. With only **nine NFTs** in existence, AURESHAME represents exclusivity and rarity, making each piece a powerful addition to any collection.
 
-## The Art of AureShame
+## The Art of AURESHAME
 
-Each NFT in the **AureShame** collection embodies a different aspect of shame. The designs are minimalistic, stripped of excess, to reflect the raw, universal emotions tied to this powerful feeling. The simplicity of the art invites deeper contemplation and provides a unique space for each individual to reflect on their own experiences.
+Each NFT in the **AURESHAME** collection embodies a different aspect of shame. The designs are minimalistic, stripped of excess, to reflect the raw, universal emotions tied to this powerful feeling. The simplicity of the art invites deeper contemplation and provides a unique space for each individual to reflect on their own experiences.
 
-Every piece is an exploration of the tension between vulnerability and strength, the isolation of shame, and the hidden beauty found within the discomfort of human emotion. The **AureShame** project isn’t just about owning a digital art piece—it’s about connecting with your own inner emotions and finding strength through understanding shame.
+Every piece is an exploration of the tension between vulnerability and strength, the isolation of shame, and the hidden beauty found within the discomfort of human emotion. The **AURESHAME** project isn’t just about owning a digital art piece—it’s about connecting with your own inner emotions and finding strength through understanding shame.
 
 ## The Collection
 
-There are only **nine exclusive NFTs** in the entire **AureShame** collection, each representing a different facet of the emotional experience of shame. These NFTs are deeply personal and unique, with no two being alike.
+There are only **nine exclusive NFTs** in the entire **AURESHAME** collection, each representing a different facet of the emotional experience of shame. These NFTs are deeply personal and unique, with no two being alike.
 
 ### How to Mint
 
@@ -24,7 +24,7 @@ There are only **nine exclusive NFTs** in the entire **AureShame** collection, e
 - **Minting Price**: 1,000,000 PLS
 - **Total NFTs in Collection**: 9
 - **Minting Limit**: 1 NFT per transaction (to preserve exclusivity)
-- [https://scan.mypinata.cloud/ipfs/bafybeih3olry3is4e4lzm7rus5l3h6zrphcal5a7ayfkhzm5oivjro2cp4/#/token/0x658a0Ea978B79A156B130F36bBC6AE3b940BfA35?tab=write_contract](https://scan.mypinata.cloud/ipfs/bafybeih3olry3is4e4lzm7rus5l3h6zrphcal5a7ayfkhzm5oivjro2cp4/#/address/0x658a0Ea978B79A156B130F36bBC6AE3b940BfA35?tab=write_contract)
+- [https://scan.mypinata.cloud/ipfs/bafybeih3olry3is4e4lzm7rus5l3h6zrphcal5a7ayfkhzm5oivjro2cp4/#/token/0x658a0Ea978B79A156B130F36bBC6AE3b940BfA35?tab=write_contract](https://scan.mypinata.cloud/ipfs/bafybeih3olry3is4e4lzm7rus5l3h6zrphcal5a7ayfkhzm5oivjro2cp4/#/address/0xE0300Fb1A0ecB5C5B15c53e45de6a71ed66Af0d5?tab=write_contract)
 
 ## Why PulseChain?
 
@@ -33,4 +33,4 @@ AureShame is built on **PulseChain** to offer a fast, low-cost, and scalable sol
 
 ## Legal Disclaimer
 
-AureShame is an artistic project and does not guarantee any financial or investment returns. The NFTs are purely for artistic and emotional exploration, and by minting, you acknowledge that the project is meant to provide unique, thought-provoking experiences.
+AURESHAME is an artistic project and does not guarantee any financial or investment returns. The NFTs are purely for artistic and emotional exploration, and by minting, you acknowledge that the project is meant to provide unique, thought-provoking experiences.
