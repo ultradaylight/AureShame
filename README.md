@@ -31,6 +31,12 @@ There are only **nine exclusive NFTs** in the entire **AURESHAME** collection, e
 AureShame is built on **PulseChain** to offer a fast, low-cost, and scalable solution for minting and trading. PulseChain is designed to give users a seamless and efficient experience, while ensuring a green and sustainable future for the blockchain. We are proud to be part of the PulseChain ecosystem and to contribute to its growing community of creators and collectors.
 
 
+## Acknowledgements
+
+- **OpenZeppelin** for the contracts used for ownership management and security.
+- **PulseChain** for being the blockchain platform where this contract runs.
+
+
 ## Legal Disclaimer
 
 AURESHAME is an artistic project and does not guarantee any financial or investment returns. The NFTs are purely for artistic and emotional exploration, and by minting, you acknowledge that the project is meant to provide unique, thought-provoking experiences.
