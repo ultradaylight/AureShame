@@ -2,7 +2,7 @@
 
 ## About AURESHAME
 
-## Contract: 0x55d8C2012a5C047162A1F20991Cf462f68f24E6E
+## Contract: 0x70a4024183E9Bb3d5d4852bcBF3afe7F46Fd5cF3
 
 **AURESHAME** is a unique NFT collection of **nine exclusive NFTs** that delve deep into the emotion of **shame**. Each artwork in this collection is designed with simplicity, yet carries profound meaning, reflecting the complexities of the human experience. This collection serves as both an artistic exploration and an invitation for introspection on how we experience, process, and express shame.
 
@@ -24,7 +24,7 @@ There are only **nine exclusive NFTs** in the entire **AURESHAME** collection, e
 - **Minting Price**: 1,000,000 PLS
 - **Total NFTs in Collection**: 9
 - **Minting Limit**: 1 NFT per transaction (to preserve exclusivity)
-- [https://scan.mypinata.cloud/ipfs/bafybeih3olry3is4e4lzm7rus5l3h6zrphcal5a7ayfkhzm5oivjro2cp4/#/token/0x55d8C2012a5C047162A1F20991Cf462f68f24E6E?tab=write_contract](https://scan.mypinata.cloud/ipfs/bafybeih3olry3is4e4lzm7rus5l3h6zrphcal5a7ayfkhzm5oivjro2cp4/#/address/0x55d8C2012a5C047162A1F20991Cf462f68f24E6E?tab=write_contract)
+- [https://scan.mypinata.cloud/ipfs/bafybeih3olry3is4e4lzm7rus5l3h6zrphcal5a7ayfkhzm5oivjro2cp4/#/token/0x70a4024183E9Bb3d5d4852bcBF3afe7F46Fd5cF3?tab=write_contract](https://scan.mypinata.cloud/ipfs/bafybeih3olry3is4e4lzm7rus5l3h6zrphcal5a7ayfkhzm5oivjro2cp4/#/address/0x70a4024183E9Bb3d5d4852bcBF3afe7F46Fd5cF3?tab=write_contract)
 
 ## Why PulseChain?
 
