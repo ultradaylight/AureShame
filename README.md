@@ -1,5 +1,7 @@
 # AURESHAME - A NFT Project Exploring the Depths of Shame
 
+**Mint Here**: https://ipfs.io/ipfs/bafybeibq5xf33v3gxgbaizzg7uzkswqqahybha6wdrcj33vaz3w2fbcipq/
+
 ## About AURESHAME
 
 ## Contract: 0x70a4024183E9Bb3d5d4852bcBF3afe7F46Fd5cF3
