@@ -45,11 +45,4 @@ AureShame is built on **PulseChain** to offer a fast, low-cost, and scalable sol
 
 AURESHAME is an artistic project and does not guarantee any financial or investment returns. The NFTs are purely for artistic and emotional exploration, and by minting, you acknowledge that the project is meant to provide unique, thought-provoking experiences.
 
----
 
-### Notes
-- **Copy-Paste Ready**: This is the complete text—paste it into your `README.md`.
-- **GitHub Issue Link**: After you create the issue using the template I provided earlier ("Bug: AURESHAME Contract Prevents Minting of 9th NFT"), replace `(insert-link-to-issue-once-created)` with the actual URL.
-- **Spelling**: I double-checked, and there are no typos in the added warning section (e.g., "unreachable," "mintable," "intended" are all correct). If you meant something else, let me know!
-
-Let me know if you need help with the next steps, like pushing this to GitHub or testing the fix!
