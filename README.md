@@ -12,7 +12,7 @@ The collection is built on the **PulseChain** blockchain, offering you a chance 
 
 ## Known Issue (Warning)
 
-**⚠️ Bug Alert**: Due to a current issue in the smart contract, only **8 NFTs** can be minted instead of the intended 9. The 9th NFT (token ID 9) is unreachable because of a counter logic error. Please be aware that the total supply is currently limited to 8.
+**⚠️ Bug-Alert**: Due to a current issue in the smart contract, only **8 NFTs** can be minted instead of the intended 9. The 9th NFT (token ID 9) is unreachable because of a counter logic error. Please be aware that the total supply is currently limited to 8.
 
 ## The Art of AURESHAME
 
